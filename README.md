@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Using the GPT supplement recommender
+
+1. Sign up for an account at [OpenAI](https://platform.openai.com/) and create an API key in [Account > API Keys](https://platform.openai.com/account/api-keys).
+2. Add the key to a `.env.local` file:
+
+   ```
+   OPENAI_API_KEY=your-key-here
+   ```
+
+3. If needed, add a payment method in [Billing](https://platform.openai.com/account/billing) to enable usage.
+4. Start the dev server with `npm run dev` and POST a JSON body like `{ "question": "어떤 영양제를 먹어야 할까요?" }` to `/api/recommend`.
+   The response will contain the assistant's answer based on `supplement_guidelines.txt`.
+
+The assistant is not a medical professional, so always consult qualified experts for critical health issues.
