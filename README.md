@@ -47,5 +47,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 3. If needed, add a payment method in [Billing](https://platform.openai.com/account/billing) to enable usage.
 4. Start the dev server with `npm run dev` and POST a JSON body like `{ "question": "어떤 영양제를 먹어야 할까요?" }` to `/api/recommend`.
    The response will contain the assistant's answer based on `supplement_guidelines.txt`.
+   If `OPENAI_API_KEY` is not set, the API will return an error message instead of contacting OpenAI.
 
 The assistant is not a medical professional, so always consult qualified experts for critical health issues.
